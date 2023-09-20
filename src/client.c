@@ -6,7 +6,7 @@
 /*   By: brmajor <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/01 11:20:10 by brmajor           #+#    #+#             */
-/*   Updated: 2023/09/14 15:55:40 by brmajor          ###   ########.fr       */
+/*   Updated: 2023/09/20 13:15:17 by brmajor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,14 +44,14 @@ void	send_msg(pid_t serv_pid, char *msg)
 				kill(serv_pid, SIGUSR2);
 			else
 				kill(serv_pid, SIGUSR1);
-			usleep(200);
+			usleep(300);
 		}
 	}
 	i = 8;
 	while (i--)
 	{
 		kill(serv_pid, SIGUSR1);
-		usleep(200);
+		usleep(300);
 	}
 }
 
